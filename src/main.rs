@@ -10,11 +10,7 @@ fn main() {
         .expect("Failed to read line");
 
     let chars = guess.chars().rev();
-    let mut reversed = "".to_owned();
-    for char in chars
-    {
-        reversed.push_str(&char.to_string());
-    }
-    
-    println!("Reversed is {reversed}")
+    let reversed: String = chars.collect();
+
+    println!("Reversed is {reversed}");
 }
